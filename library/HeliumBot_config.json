@@ -1,0 +1,49 @@
+{
+    "Scheer 2": {
+        "name": "Scheer 2",
+        "driver": {"name": "AMI135", "refresh_rate": 2},
+        "logger": {
+            "path": "helium\\",
+            "file_name": "scheer2_helium",
+            "refresh_rate": 5,
+            "header": [
+                "with_IVC: True",
+                "date [%Y-%m-%d %H:%M:%S], fill_height [cm], volume [L], percentage [%]"
+            ]
+        },
+        "telegram": {
+            "token": "5204069100:AAFMzDK4WCR2vC4va8s3s6tpGvb1PzmEroU",
+            "bot_name": "scheer_2_dewar_bot"
+        },
+        "plotter": {
+            "pattern": "[('date','datetime64[s]'),('fill_height','f8'),('volume','f8'),('percentage','f8')]",
+            "max_days": 30,
+            "function": "generate_plot_scheer_2",
+            "arg_handler": "plot_arg_handler_scheer_2",
+            "title": "'Scheer II' Dewar"
+        }
+    },
+    "Test": {
+        "name": "Test",
+        "driver": {"name": "TestDriver", "refresh_rate": 2},
+        "logger": {
+            "path": "helium2/",
+            "file_name": "scheer2_helium",
+            "refresh_rate": 5,
+            "header": [
+                "date [%Y-%m-%d %H:%M:%S], fill_height [cm], volume [L], percentage [%]"
+            ]
+        },
+        "telegram": {
+            "token": "1817796104:AAE-PugEYnIUzDh4tR1hjz86cfs9Ooz_gLc",
+            "bot_name": "schmampfbot"
+        },
+        "plotter": {
+            "pattern": "[('date','datetime64[s]'),('fill_height','f8'),('volume','f8'),('percentage','f8')]",
+            "max_days": 30,
+            "function": "generate_plot_scheer_2",
+            "arg_handler": "plot_arg_handler_scheer_2",
+            "title": "'Scheer II' Dewar"
+        }
+    }
+}
