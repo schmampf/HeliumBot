@@ -17,8 +17,8 @@ class NotificationsWorker(Thread):
         self.updater = updater
         self.chat_id = chat_id
 
-        self.refresh_rate = 3600.0  # s
-        self.alarm_level = 20.0  # L
+        self.refresh_rate = 7200.0  # s
+        self.alarm_level = 12.0  # L
         self.program_refresh = 5  # s
 
         logger.info(f"({self.name}) ... initialized!")
